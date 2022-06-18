@@ -9,7 +9,6 @@ const contact = fs.readFileSync(`${__dirname}/pages/contact.html`,'utf-8' );
 
 const server = http.createServer((req, res) => {
     const { query, pathname } = url.parse(req.url, true);
-    console.log(query);
 
     if (pathname === '/' || pathname === '/home') {
         res.writeHead(200, {'Content-type': 'text/html'});
